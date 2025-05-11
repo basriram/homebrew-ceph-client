@@ -39,11 +39,6 @@ class CephClient < Formula
     sha256 "ae7d96c64100543dc61662b40a28f3b03c0f94a503ed121c6fca2782c5816f81"
   end
 
-  resource "PyYAML" do
-    url "https://github.com/yaml/pyyaml/archive/refs/tags/6.0.2.tar.gz"
-    sha256 "9377c381ac3fccad8df73d96b5139ef8b1a2c57a0d913e95ab0a2275d66b5caa"
-  end
-
   resource "wcwidth" do
     url "https://files.pythonhosted.org/packages/89/38/459b727c381504f361832b9e5ace19966de1a235d73cdbdea91c771a1155/wcwidth-0.2.5.tar.gz"
     sha256 "c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"
