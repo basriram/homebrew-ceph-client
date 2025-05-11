@@ -23,7 +23,6 @@ class CephClient < Formula
   depends_on "python@3.13"
   depends_on "sphinx-doc" => :build
   depends_on "yasm"
-  depends_on "pyyaml"
   def caveats
     <<-EOS.undent
       macFUSE must be installed prior to building this formula. macFUSE is also necessary
