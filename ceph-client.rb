@@ -23,7 +23,7 @@ class CephClient < Formula
   depends_on "ninja" => :build
   depends_on "openssl@3" => :build # Use openssl@3 for consistency if available, otherwise openssl
   depends_on "pkg-config" => :build
-  depends_on "python@3.11" => :build # Also needed at runtime for bindings
+  depends_on "python@3.13" => :build # Also needed at runtime for bindings
   depends_on "sphinx-doc" => :build
   depends_on "boost" => :build
 
@@ -31,7 +31,7 @@ class CephClient < Formula
   depends_on "leveldb"
   depends_on "nss"
   depends_on "openssl@3" # Use openssl@3 for consistency if available, otherwise openssl
-  depends_on "python@3.11"
+  depends_on "python@3.13"
   depends_on "yasm" # Needed by boost build? Check boost reqs. Usually needed for crypto. Keep for now.
   
   resource "prettytable" do
@@ -79,10 +79,10 @@ class CephClient < Formula
 
   def install
     # --- Python Setup ---
-    python = Formula["python@3.11"]
-    python_exe = python.opt_bin/"python3.11"
-    pip_exe = python.opt_bin/"pip3.11"
-    python_prefix = python.opt_frameworks/"Python.framework/Versions/3.11"
+    python = Formula["python@3.13"]
+    python_exe = python.opt_bin/"python3.13"
+    pip_exe = python.opt_bin/"pip3.13"
+    python_prefix = python.opt_frameworks/"Python.framework/Versions/3.13"
     xy = Language::Python.major_minor_version python_exe
 
     venv_root = libexec/"vendor"
@@ -105,7 +105,7 @@ class CephClient < Formula
                                         .gsub(/set\(ENV\{CC\} "\${PY_CC}"\)/, "")
                                         .gsub(/set\(ENV\{LDSHARED\} "\${PY_LDSHARED}"\)/, "")
                                         .gsub(/set\(options --prefix=\${CMAKE_INSTALL_PREFIX}\)/, 
-                                             'set(options --prefix=${CMAKE_INSTALL_PREFIX} --install-lib=${CMAKE_INSTALL_PREFIX}/lib/python3.11/site-packages)')
+                                             'set(options --prefix=${CMAKE_INSTALL_PREFIX} --install-lib=${CMAKE_INSTALL_PREFIX}/lib/python3.13/site-packages)')
       
       # Write the patched file back
       File.write(distutils_file, patched_content)
