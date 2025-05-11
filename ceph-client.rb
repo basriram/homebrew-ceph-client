@@ -49,6 +49,11 @@ class CephClient < Formula
     sha256 "c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"
   end
 
+   # Resource for Boost
+  resource "boost" do
+    url "https://archives.boost.io/release/1.88.0/source/boost_1_88_0.tar.gz"
+    sha256 "3621533e820dcab1e8012afd583c0c73cf0f77694952b81352bf38c1488f9cb4"
+  end
   # Don't use a patch - we'll directly modify the file during install
 
   def caveats
