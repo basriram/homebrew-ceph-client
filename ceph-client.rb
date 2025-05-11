@@ -33,7 +33,6 @@ class CephClient < Formula
   depends_on "openssl@3" # Use openssl@3 for consistency if available, otherwise openssl
   depends_on "python@3.11"
   depends_on "yasm" # Needed by boost build? Check boost reqs. Usually needed for crypto. Keep for now.
-  depends_on "boost"
   
   resource "prettytable" do
     url "https://files.pythonhosted.org/packages/cb/7d/7e6bc4bd4abc49e9f4f5c4773bb43d1615e4b476d108d1b527318b9c6521/prettytable-3.2.0.tar.gz"
