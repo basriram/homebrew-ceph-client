@@ -25,6 +25,7 @@ class CephClient < Formula
   depends_on "pkg-config" => :build
   depends_on "python@3.11" => :build # Also needed at runtime for bindings
   depends_on "sphinx-doc" => :build
+  depends_on "boost" => :build
 
   # Runtime dependencies
   depends_on "leveldb"
@@ -32,13 +33,8 @@ class CephClient < Formula
   depends_on "openssl@3" # Use openssl@3 for consistency if available, otherwise openssl
   depends_on "python@3.11"
   depends_on "yasm" # Needed by boost build? Check boost reqs. Usually needed for crypto. Keep for now.
-
-  # Resource for Boost
-  resource "boost" do
-    url "https://archives.boost.io/release/1.78.0/source/boost_1_78_0.tar.gz"
-    sha256 "94ced8b72956591c4775ae2207a9763d3600b30d9d7446562c552f0a14a63be7"
-  end
-
+  depends_on "boost"
+  
   resource "prettytable" do
     url "https://files.pythonhosted.org/packages/cb/7d/7e6bc4bd4abc49e9f4f5c4773bb43d1615e4b476d108d1b527318b9c6521/prettytable-3.2.0.tar.gz"
     sha256 "ae7d96c64100543dc61662b40a28f3b03c0f94a503ed121c6fca2782c5816f81"
