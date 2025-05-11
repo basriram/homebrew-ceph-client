@@ -35,8 +35,8 @@ class CephClient < Formula
 
   # Resource for Boost
   resource "boost" do
-    url "https://archives.boost.io/release/1.76.0/source/boost_1_76_0.tar.gz"
-    sha256 "7bd7ddceec1a1dfdcbdb3e609b60d01739c38390a5f956385a12f3122049f0ca"
+    url "https://archives.boost.io/release/1.78.0/source/boost_1_78_0.tar.gz"
+    sha256 "94ced8b72956591c4775ae2207a9763d3600b30d9d7446562c552f0a14a63be7"
   end
 
   resource "prettytable" do
