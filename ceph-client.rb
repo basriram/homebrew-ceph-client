@@ -39,8 +39,8 @@ class CephClient < Formula
   end
 
   resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/36/2b/61d51a2c4f25ef062ae3f74576b01638bebad5e045f747ff12643df63844/PyYAML-6.0.tar.gz"
-    sha256 "68fb519c14306fec9720a2a5b45bc9f0c8d1b9c72adf45c37baedfcd949c35a2"
+    url "https://github.com/yaml/pyyaml/archive/refs/tags/6.0.2.tar.gz"
+    sha256 "9377c381ac3fccad8df73d96b5139ef8b1a2c57a0d913e95ab0a2275d66b5caa"
   end
 
   resource "wcwidth" do
