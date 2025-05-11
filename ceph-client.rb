@@ -16,13 +16,14 @@ class CephClient < Formula
   depends_on "openssl" => :build
   depends_on "cmake" => :build
   depends_on "ninja" => :build
-  depends_on "cython" => :build
+  depends_on "cython"
   depends_on "leveldb" => :build
   depends_on "nss"
   depends_on "pkg-config" => :build
   depends_on "python@3.13"
   depends_on "sphinx-doc" => :build
   depends_on "yasm"
+  depends_on "pyyaml"
   def caveats
     <<-EOS.undent
       macFUSE must be installed prior to building this formula. macFUSE is also necessary
